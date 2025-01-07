@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Demo.Invoify.Utils.listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Demo.Invoify.tests.test_PreviewPage">
+        <methods>
+          <include name="startingTest"/>
+          <include name="endTest"/>
+          <include name="initiateDriver"/>
+          <include name="testGeneratingNewInvoice"/>
+          <include name="setMethod"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- Demo.Invoify.tests.test_PreviewPage -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
