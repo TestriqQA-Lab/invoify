@@ -56,7 +56,7 @@ public class test_PreviewPage extends DriverManagement {
 		preview.enterInvalidEmailAndSendMail();
 		Assert.assertEquals(preview.verifyErrorMessageOfInvalidMail(),"Please enter a valid email address");
 		preview.enterEmailAndSendMail();
-		Assert.assertEquals(preview.getMessage(), "Error");
+		Assert.assertEquals(preview.getMessage(), "Your invoice has been generated!");
 	}
 	
 }

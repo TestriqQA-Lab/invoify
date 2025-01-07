@@ -100,6 +100,8 @@ public class DriverManagement {
 		case "chrome":
 			try {
 				ChromeOptions chromeOptions = new ChromeOptions();
+				chromeOptions.addArguments("--incognito");
+				chromeOptions.addArguments("--headless");
 				driver = new ChromeDriver(chromeOptions);
 			} catch (Exception e) {
 			}
@@ -107,6 +109,8 @@ public class DriverManagement {
 		case "firefox":
 			try {
 				FirefoxOptions firefoxOptions = new FirefoxOptions();
+				firefoxOptions.addArguments("--incognito");
+				firefoxOptions.addArguments("--headless");
 				driver = new FirefoxDriver(firefoxOptions);
 			} catch (Exception e) {
 			}
@@ -114,6 +118,8 @@ public class DriverManagement {
 		case "edge":
 			try {
 				EdgeOptions edgeOptions = new EdgeOptions();
+				edgeOptions.addArguments("--incognito");
+				edgeOptions.addArguments("--headless");
 				driver = new EdgeDriver(edgeOptions);
 			} catch (Exception e) {
 			}
