@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - main
-      - develop
   pull_request:
     branches:
       - main
-      - develop
 
 jobs:
   selenium-java-tests:
@@ -19,9 +17,9 @@ jobs:
         image: selenium/standalone-chrome:latest
         ports:
           - 4444:4444
-
       webapp:
-        image: node:16
+        name: node-container
+        image: node:16-slim
         ports:
           - 3000:3000
         options: >-
@@ -29,6 +27,7 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 3
+        detach: true
 
     steps:
     - name: Checkout repository
@@ -52,7 +51,16 @@ jobs:
       run: |
         npm install
         npm start &
-        sleep 10  # Ensure the server has time to start
+        sleep 20  # Ensure the server has time to start
+
+    - name: Wait for Webapp to Start
+      run: |
+        sleep 30  # Wait for the webapp container to be ready
+
+    - name: Check Webapp Container Logs
+      run: |
+        docker ps -a
+        docker logs node-container
 
     - name: Run Tests
       run: mvn test
