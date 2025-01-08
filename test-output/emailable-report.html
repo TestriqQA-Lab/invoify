@@ -9,38 +9,12 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">171,787</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">61,614</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Demo.Invoify.tests.test_PreviewPage</td><td><a href="#m0">testGeneratingNewInvoice</a></td><td rowspan="1">1736149820635</td><td rowspan="1">45657</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Demo.Invoify.tests.test_PreviewPage</td><td><a href="#m1">testInvoiceSaving</a></td><td rowspan="1">1736149755649</td><td rowspan="1">64964</td></tr><tr class="passedeven"><td><a href="#m2">testLoadingInvoiceFromDevice</a></td><td rowspan="1">1736149866308</td><td rowspan="1">11061</td></tr><tr class="passedeven"><td><a href="#m3">testSendingGeneratedPdfViaMail</a></td><td rowspan="1">1736149877385</td><td rowspan="1">26393</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">Demo.Invoify.tests.test_FormAndTo</td><td><a href="#m0">testAddingNewCustomInput</a></td><td rowspan="1">1736316671429</td><td rowspan="1">14867</td></tr><tr class="passedeven"><td><a href="#m1">testLogoIsDisplayed</a></td><td rowspan="1">1736316652197</td><td rowspan="1">19219</td></tr><tr class="passedeven"><td><a href="#m2">testNextButtonFunctionality</a></td><td rowspan="1">1736316686316</td><td rowspan="1">7503</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">Demo.Invoify.tests.test_PreviewPage#testGeneratingNewInvoice</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;grid gap-1&apos;]/div[@class=&apos;text-sm font-semibold&apos;]&quot;}
-  (Session info: chrome=131.0.6778.205)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e2095c416f93ddd56b44d870dbb7655, findElement {using=xpath, value=//div[@class=&apos;grid gap-1&apos;]/div[@class=&apos;text-sm font-semibold&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: /var/folders/zr/v2p23ft14w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51813}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51813/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e2095c416f93ddd56b44d870dbb7655
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy21.getText(Unknown Source)
-	at Demo.Invoify.Pages.actionAndPreviewPage.getMessage(actionAndPreviewPage.java:188)
-	at Demo.Invoify.tests.test_PreviewPage.testGeneratingNewInvoice(test_PreviewPage.java:40)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Demo.Invoify.tests.test_PreviewPage#testInvoiceSaving</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">Demo.Invoify.tests.test_PreviewPage#testLoadingInvoiceFromDevice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">Demo.Invoify.tests.test_PreviewPage#testSendingGeneratedPdfViaMail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">Demo.Invoify.tests.test_FormAndTo#testAddingNewCustomInput</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Demo.Invoify.tests.test_FormAndTo#testLogoIsDisplayed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">Demo.Invoify.tests.test_FormAndTo#testNextButtonFunctionality</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

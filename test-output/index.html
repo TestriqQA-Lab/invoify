@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo.Invoify.tests.test_PreviewPage" hash-for-method="testGeneratingNewInvoice">testGeneratingNewInvoice</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,17 +102,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo.Invoify.tests.test_PreviewPage" hash-for-method="testInvoiceSaving">testInvoiceSaving</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo.Invoify.tests.test_FormAndTo" hash-for-method="testAddingNewCustomInput">testAddingNewCustomInput</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo.Invoify.tests.test_PreviewPage" hash-for-method="testLoadingInvoiceFromDevice">testLoadingInvoiceFromDevice</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo.Invoify.tests.test_FormAndTo" hash-for-method="testLogoIsDisplayed">testLogoIsDisplayed</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo.Invoify.tests.test_PreviewPage" hash-for-method="testSendingGeneratedPdfViaMail">testSendingGeneratedPdfViaMail</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Demo.Invoify.tests.test_FormAndTo" hash-for-method="testNextButtonFunctionality">testNextButtonFunctionality</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -141,73 +127,31 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">Demo.Invoify.tests.test_PreviewPage</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testGeneratingNewInvoice">
-                  </a> <!-- testGeneratingNewInvoice -->
-                  <span class="method-name">testGeneratingNewInvoice</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;grid gap-1&apos;]/div[@class=&apos;text-sm font-semibold&apos;]&quot;}
-  (Session info: chrome=131.0.6778.205)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0e2095c416f93ddd56b44d870dbb7655, findElement {using=xpath, value=//div[@class=&apos;grid gap-1&apos;]/div[@class=&apos;text-sm font-semibold&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.204 (52183f9e99a..., userDataDir: /var/folders/zr/v2p23ft14w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51813}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:51813/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0e2095c416f93ddd56b44d870dbb7655
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy21.getText(Unknown Source)
-	at Demo.Invoify.Pages.actionAndPreviewPage.getMessage(actionAndPreviewPage.java:188)
-	at Demo.Invoify.tests.test_PreviewPage.testGeneratingNewInvoice(test_PreviewPage.java:40)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Demo.Invoify.tests.test_PreviewPage</span>
+              <span class="class-name">Demo.Invoify.tests.test_FormAndTo</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testInvoiceSaving">
-                  </a> <!-- testInvoiceSaving -->
-                  <span class="method-name">testInvoiceSaving</span>
+                  <a name="testAddingNewCustomInput">
+                  </a> <!-- testAddingNewCustomInput -->
+                  <span class="method-name">testAddingNewCustomInput</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testLoadingInvoiceFromDevice">
-                  </a> <!-- testLoadingInvoiceFromDevice -->
-                  <span class="method-name">testLoadingInvoiceFromDevice</span>
+                  <a name="testLogoIsDisplayed">
+                  </a> <!-- testLogoIsDisplayed -->
+                  <span class="method-name">testLogoIsDisplayed</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testSendingGeneratedPdfViaMail">
-                  </a> <!-- testSendingGeneratedPdfViaMail -->
-                  <span class="method-name">testSendingGeneratedPdfViaMail</span>
+                  <a name="testNextButtonFunctionality">
+                  </a> <!-- testNextButtonFunctionality -->
+                  <span class="method-name">testNextButtonFunctionality</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -227,7 +171,7 @@ Session ID: 0e2095c416f93ddd56b44d870dbb7655
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Demo.Invoify.tests.test_PreviewPage&quot;/&gt;
+      &lt;class name=&quot;Demo.Invoify.tests.test_FormAndTo&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -267,28 +211,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testInvoiceSaving')
-data.setCell(0, 2, 'Demo.Invoify.tests.test_PreviewPage')
-data.setCell(0, 3, 64964);
+data.setCell(0, 1, 'testLogoIsDisplayed')
+data.setCell(0, 2, 'Demo.Invoify.tests.test_FormAndTo')
+data.setCell(0, 3, 19219);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGeneratingNewInvoice')
-data.setCell(1, 2, 'Demo.Invoify.tests.test_PreviewPage')
-data.setCell(1, 3, 45657);
+data.setCell(1, 1, 'testAddingNewCustomInput')
+data.setCell(1, 2, 'Demo.Invoify.tests.test_FormAndTo')
+data.setCell(1, 3, 14867);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testSendingGeneratedPdfViaMail')
-data.setCell(2, 2, 'Demo.Invoify.tests.test_PreviewPage')
-data.setCell(2, 3, 26393);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testLoadingInvoiceFromDevice')
-data.setCell(3, 2, 'Demo.Invoify.tests.test_PreviewPage')
-data.setCell(3, 3, 11061);
+data.setCell(2, 1, 'testNextButtonFunctionality')
+data.setCell(2, 2, 'Demo.Invoify.tests.test_FormAndTo')
+data.setCell(2, 3, 7503);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 41 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -314,56 +254,46 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.test_PreviewPage</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Demo.Invoify.tests.test_FormAndTo</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">startingTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">initiateDriver</span>
-                <span class="method-start">740 ms</span>
+                <span class="method-start">772 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">setMethod(public void Demo.Invoify.tests.test_PreviewPage.testInvoiceSaving() throws java.io.IOException)</span>
-                <span class="method-start">23970 ms</span>
+                <span class="method-name">setMethod(public void Demo.Invoify.tests.test_FormAndTo.testLogoIsDisplayed())</span>
+                <span class="method-start">20537 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testInvoiceSaving</span>
-                <span class="method-start">24013 ms</span>
+                <span class="method-name">testLogoIsDisplayed</span>
+                <span class="method-start">20575 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">setMethod(public void Demo.Invoify.tests.test_PreviewPage.testGeneratingNewInvoice() throws java.io.IOExceptio...)</span>
-                <span class="method-start">88998 ms</span>
+                <span class="method-name">setMethod(public void Demo.Invoify.tests.test_FormAndTo.testAddingNewCustomInput())</span>
+                <span class="method-start">39804 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testGeneratingNewInvoice</span>
-                <span class="method-start">88999 ms</span>
+                <span class="method-name">testAddingNewCustomInput</span>
+                <span class="method-start">39807 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">setMethod(public void Demo.Invoify.tests.test_PreviewPage.testLoadingInvoiceFromDevice() throws java.io.IOExce...)</span>
-                <span class="method-start">134671 ms</span>
+                <span class="method-name">setMethod(public void Demo.Invoify.tests.test_FormAndTo.testNextButtonFunctionality() throws java.io.IOExcepti...)</span>
+                <span class="method-start">54692 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testLoadingInvoiceFromDevice</span>
-                <span class="method-start">134672 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">setMethod(public void Demo.Invoify.tests.test_PreviewPage.testSendingGeneratedPdfViaMail() throws java.io.IOEx...)</span>
-                <span class="method-start">145746 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testSendingGeneratedPdfViaMail</span>
-                <span class="method-start">145749 ms</span>
+                <span class="method-name">testNextButtonFunctionality</span>
+                <span class="method-start">54694 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">quitDriver</span>
-                <span class="method-start">172163 ms</span>
+                <span class="method-start">62203 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">172625 ms</span>
+                <span class="method-start">62436 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

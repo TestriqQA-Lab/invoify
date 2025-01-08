@@ -57,7 +57,15 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version> <!-- Ensure this version or later -->
+				<configuration>
+					<source>11</source> <!-- Use the appropriate Java version -->
+					<target>11</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>
