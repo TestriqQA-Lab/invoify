@@ -1,4 +1,4 @@
-name: Selenium Java Automation Tests
+name: CI Pipeline for Selenium Tests
 
 on:
   push:
@@ -9,35 +9,54 @@ on:
       - main
 
 jobs:
-  selenium-java-tests:
+  build-and-test:
     runs-on: ubuntu-latest
 
     services:
-      selenium:
-        image: selenium/standalone-chrome:latest
+      app:
+        image: node:16  # Use a compatible Node.js version
         ports:
-          - 4444:4444
+          - "3000:3000"  # Expose port for server
+        options: >-
+          --health-cmd "curl -f http://localhost:3000 || exit 1"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 3
 
     steps:
-    - name: Checkout repository
+    - name: Check out repository
       uses: actions/checkout@v3
 
-    - name: Set up JDK 11
+    - name: Set up Java
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
         distribution: 'temurin'
+        java-version: '11'
 
-    - name: Cache Maven dependencies
-      uses: actions/cache@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
       with:
-        path: ~/.m2
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
+        node-version: '16'
 
-    - name: Run Maven build
-      run: mvn clean install
+    - name: Install Node.js dependencies
+      run: npm install
 
-    - name: Run Tests
-      run: mvn test
+    - name: Start server
+      run: |
+        npm start &
+        sleep 10  # Wait for the server to start
+
+    - name: Wait for server to be ready
+      run: npx wait-on http://localhost:3000
+
+    - name: Run Selenium tests with Maven
+      env:
+        BASE_URL: http://localhost:3000
+      run: mvn clean test
+
+    - name: Archive test results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: target/surefire-reports/
