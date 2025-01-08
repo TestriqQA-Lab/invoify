@@ -1,22 +1,29 @@
-name: CI Pipeline for Selenium Tests
+name: Selenium Java Automation Tests
 
 on:
   push:
     branches:
       - main
+      - develop
   pull_request:
     branches:
       - main
+      - develop
 
 jobs:
-  build-and-test:
+  selenium-java-tests:
     runs-on: ubuntu-latest
 
     services:
-      app:
-        image: node:16  # Use a compatible Node.js version
+      selenium:
+        image: selenium/standalone-chrome:latest
         ports:
-          - "3000:3000"  # Expose port for server
+          - 4444:4444
+
+      webapp:
+        image: node:16
+        ports:
+          - 3000:3000
         options: >-
           --health-cmd "curl -f http://localhost:3000 || exit 1"
           --health-interval 10s
@@ -24,39 +31,30 @@ jobs:
           --health-retries 3
 
     steps:
-    - name: Check out repository
+    - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Java
+    - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
-        distribution: 'temurin'
         java-version: '11'
+        distribution: 'temurin'
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
+    - name: Cache Maven dependencies
+      uses: actions/cache@v3
       with:
-        node-version: '16'
+        path: ~/.m2
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
 
-    - name: Install Node.js dependencies
-      run: npm install
-
-    - name: Start server
+    - name: Install dependencies and start server
       run: |
+        npm install
         npm start &
-        sleep 10  # Wait for the server to start
+        sleep 10  # Ensure the server has time to start
 
-    - name: Wait for server to be ready
-      run: npx wait-on http://localhost:3000
-
-    - name: Run Selenium tests with Maven
+    - name: Run Tests
+      run: mvn test
       env:
-        BASE_URL: http://localhost:3000
-      run: mvn clean test
-
-    - name: Archive test results
-      if: always()
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-results
-        path: target/surefire-reports/
+        BROWSER: chrome  # Example environment variable for browser choice
