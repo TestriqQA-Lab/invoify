@@ -139,8 +139,10 @@ public class actionAndPreviewPage {
 	}
 	
 	public boolean verifySignature() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		boolean flag = false;
 	    try {
+	    	wait.until(ExpectedConditions.visibilityOf(signature));
 	        if (!signature.isDisplayed()) {
 	            flag = false;
 	        } else {
