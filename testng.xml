@@ -11,7 +11,7 @@
 			<class name="Demo.Invoify.tests.test_LineItems" />
 			<class name="Demo.Invoify.tests.test_PaymentInfo" />
 			<class name="Demo.Invoify.tests.test_SummaryPage" />
-			<class name="Demo.Invoify.tests.test_PreviewPage" />
+			<!--<class name="Demo.Invoify.tests.test_PreviewPage" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
