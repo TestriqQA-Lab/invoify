@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Demo.Invoify.TestComponant.listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="UploadTest(failed)">
+    <classes>
+      <class name="Demo.Invoify.tests.verifyAttachmentUpload">
+        <methods>
+          <include name="verifyBillAttachement"/>
+          <include name="launchApplication"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- Demo.Invoify.tests.verifyAttachmentUpload -->
+    </classes>
+  </test> <!-- UploadTest(failed) -->
+  <test thread-count="5" parallel="tests" name="ActionTest(failed)">
+    <classes>
+      <class name="Demo.Invoify.tests.validatingInvoiceActions">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="testInvoiceSaving"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- Demo.Invoify.tests.validatingInvoiceActions -->
+    </classes>
+  </test> <!-- ActionTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

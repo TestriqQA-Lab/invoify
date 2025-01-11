@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel = "tests" name="Suite">
+	<listeners>
+		<listener class-name="Demo.Invoify.TestComponant.listeners"></listener>
+	</listeners>
+	<test name="DataTest" thread-count="3"> 
+		<classes>
+			<class name="Demo.Invoify.tests.dataInputValidation" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="ActionTest" thread-count="3"> 
+		<classes>
+			<class name="Demo.Invoify.tests.validatingInvoiceActions" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="UploadTest" thread-count="3"> 
+		<classes>
+			<class name="Demo.Invoify.tests.verifyAttachmentUpload" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
