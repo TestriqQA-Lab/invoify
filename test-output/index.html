@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">8 methods, 2 failed,  1 skipped,  5 passed</span>
+                    <span class="method-stats">8 methods, 1 failed,  1 skipped,  6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -100,11 +100,6 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Demo.Invoify.tests.validatingInvoiceActions" class="method navigator-link" hash-for-method="testInvoiceSaving">testInvoiceSaving</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Demo.Invoify.tests.verifyAttachmentUpload" class="method navigator-link" hash-for-method="verifyBillAttachement">verifyBillAttachement</a> <!-- method navigator-link -->
@@ -136,6 +131,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Demo.Invoify.tests.dataInputValidation" class="method navigator-link" hash-for-method="testBankDetailsAreEntered">testBankDetailsAreEntered</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Demo.Invoify.tests.validatingInvoiceActions" class="method navigator-link" hash-for-method="testInvoiceSaving">testInvoiceSaving</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -193,9 +193,9 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">Demo.Invoify.tests.validatingInvoiceActions</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -215,52 +215,6 @@
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">Demo.Invoify.tests.validatingInvoiceActions</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testInvoiceSaving">
-                  </a> <!-- testInvoiceSaving -->
-                  <span class="method-name">testInvoiceSaving</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;grid gap-1&apos;]/div[@class=&apos;text-sm font-semibold&apos;]&quot;}
-  (Session info: chrome=131.0.6778.265)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
-System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;17.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0c3cac223a8045163987f9b370b12295, findElement {using=xpath, value=//div[@class=&apos;grid gap-1&apos;]/div[@class=&apos;text-sm font-semibold&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: /var/folders/zr/v2p23ft14w9...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54317}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:54317/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0c3cac223a8045163987f9b370b12295
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.getText(Unknown Source)
-	at Demo.Invoify.Pages.actionAndPreviewPage.getMessage(actionAndPreviewPage.java:180)
-	at Demo.Invoify.tests.validatingInvoiceActions.testInvoiceSaving(validatingInvoiceActions.java:34)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 21 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
@@ -273,6 +227,28 @@ Session ID: 0c3cac223a8045163987f9b370b12295
                   <a name="testSignatureUpload">
                   </a> <!-- testSignatureUpload -->
                   <span class="method-name">testSignatureUpload</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Demo.Invoify.tests.validatingInvoiceActions</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvoiceSaving">
+                  </a> <!-- testInvoiceSaving -->
+                  <span class="method-name">testInvoiceSaving</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testNavigation">
+                  </a> <!-- testNavigation -->
+                  <span class="method-name">testNavigation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -302,21 +278,6 @@ Session ID: 0c3cac223a8045163987f9b370b12295
                   <a name="testToggleButtonEnabling">
                   </a> <!-- testToggleButtonEnabling -->
                   <span class="method-name">testToggleButtonEnabling</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Demo.Invoify.tests.validatingInvoiceActions</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testNavigation">
-                  </a> <!-- testNavigation -->
-                  <span class="method-name">testNavigation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -396,35 +357,35 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testInvoiceSaving')
 data.setCell(0, 2, 'Demo.Invoify.tests.validatingInvoiceActions')
-data.setCell(0, 3, 111147);
+data.setCell(0, 3, 121754);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testBankDetailsAreEntered')
 data.setCell(1, 2, 'Demo.Invoify.tests.dataInputValidation')
-data.setCell(1, 3, 80178);
+data.setCell(1, 3, 74193);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testSignatureUpload')
 data.setCell(2, 2, 'Demo.Invoify.tests.verifyAttachmentUpload')
-data.setCell(2, 3, 72651);
+data.setCell(2, 3, 72462);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testInvoiceSaving')
-data.setCell(3, 2, 'Demo.Invoify.tests.validatingInvoiceActions')
-data.setCell(3, 3, 46308);
+data.setCell(3, 1, 'testToggleButtonEnabling')
+data.setCell(3, 2, 'Demo.Invoify.tests.dataInputValidation')
+data.setCell(3, 3, 61619);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testToggleButtonEnabling')
-data.setCell(4, 2, 'Demo.Invoify.tests.dataInputValidation')
-data.setCell(4, 3, 45434);
+data.setCell(4, 1, 'verifyBillAttachement')
+data.setCell(4, 2, 'Demo.Invoify.tests.verifyAttachmentUpload')
+data.setCell(4, 3, 41811);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyBillAttachement')
-data.setCell(5, 2, 'Demo.Invoify.tests.verifyAttachmentUpload')
-data.setCell(5, 3, 45125);
+data.setCell(5, 1, 'testInvoiceSaving')
+data.setCell(5, 2, 'Demo.Invoify.tests.validatingInvoiceActions')
+data.setCell(5, 3, 25827);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'testProperTotalCalculation')
 data.setCell(6, 2, 'Demo.Invoify.tests.dataInputValidation')
-data.setCell(6, 3, 37528);
+data.setCell(6, 3, 24211);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testNavigation')
 data.setCell(7, 2, 'Demo.Invoify.tests.validatingInvoiceActions')
-data.setCell(7, 3, 8562);
+data.setCell(7, 3, 8598);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -455,20 +416,6 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.dataInputValidation</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.validatingInvoiceActions</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">Demo.Invoify.tests.verifyAttachmentUpload</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">launchApplication</span>
@@ -477,83 +424,80 @@ return data;
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Demo.Invoify.tests.validatingInvoiceActions</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Demo.Invoify.tests.dataInputValidation</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testBankDetailsAreEntered</span>
+                <span class="method-start">37405 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Demo.Invoify.tests.validatingInvoiceActions</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testInvoiceSaving</span>
-                <span class="method-start">36707 ms</span>
+                <span class="method-start">37479 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Demo.Invoify.tests.verifyAttachmentUpload</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSignatureUpload</span>
-                <span class="method-start">37034 ms</span>
+                <span class="method-start">37656 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.dataInputValidation</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testBankDetailsAreEntered</span>
-                <span class="method-start">37041 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.verifyAttachmentUpload</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyBillAttachement</span>
-                <span class="method-start">109829 ms</span>
+                <span class="method-start">110197 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Demo.Invoify.tests.dataInputValidation</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testProperTotalCalculation</span>
-                <span class="method-start">117276 ms</span>
+                <span class="method-start">111606 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.validatingInvoiceActions</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testInvoiceSaving</span>
-                <span class="method-start">147878 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.dataInputValidation</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testToggleButtonEnabling</span>
-                <span class="method-start">154813 ms</span>
+                <span class="method-start">135848 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Demo.Invoify.tests.verifyAttachmentUpload</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">quitDriver</span>
-                <span class="method-start">155670 ms</span>
+                <span class="method-start">152842 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Demo.Invoify.tests.validatingInvoiceActions</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">testNavigation</span>
-                <span class="method-start">194908 ms</span>
+                <span class="method-name">testInvoiceSaving</span>
+                <span class="method-start">159248 ms</span>
               </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testNavigation</span>
+                <span class="method-start">185112 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">quitDriver</span>
+                <span class="method-start">193720 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Demo.Invoify.tests.dataInputValidation</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">quitDriver</span>
-                <span class="method-start">200283 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Demo.Invoify.tests.validatingInvoiceActions</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">quitDriver</span>
-                <span class="method-start">203486 ms</span>
+                <span class="method-start">197485 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
