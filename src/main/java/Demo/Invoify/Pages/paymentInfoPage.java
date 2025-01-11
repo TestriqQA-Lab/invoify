@@ -1,6 +1,5 @@
 package Demo.Invoify.Pages;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -9,18 +8,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class paymentInfoPage {
+import Demo.Invoify.Core.PageObjectFacilitator;
+
+public class paymentInfoPage extends PageObjectFacilitator {
 
 	WebDriver driver;
 	Properties prop;
 
 	public paymentInfoPage(WebDriver driver) throws IOException {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		String path = System.getProperty("user.dir");
-		FileInputStream fis = new FileInputStream(path + "/src/main/java/Demo/Invoify/Resources/data.properties");
-		prop = new Properties();
-		prop.load(fis);
+		prop = loadData();
 	}
 
 	@FindBy(xpath = "//input[@placeholder='Bank Name']")

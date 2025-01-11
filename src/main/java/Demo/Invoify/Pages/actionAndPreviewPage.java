@@ -1,32 +1,26 @@
 package Demo.Invoify.Pages;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class actionAndPreviewPage {
+import Demo.Invoify.Core.PageObjectFacilitator;
+
+public class actionAndPreviewPage extends PageObjectFacilitator {
 
 	WebDriver driver;
 	Properties prop;
 	
 	public actionAndPreviewPage(WebDriver driver) throws IOException {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		String path = System.getProperty("user.dir");
-		FileInputStream fis = new FileInputStream(path + "/src/main/java/Demo/Invoify/Resources/data.properties");
-		prop = new Properties();
-		prop.load(fis);
+		prop = loadData();
 	}
 	
 	@FindBy(xpath = "//button[text()='Load Invoice']")
@@ -139,10 +133,9 @@ public class actionAndPreviewPage {
 	}
 	
 	public boolean verifySignature() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		boolean flag = false;
 	    try {
-	    	wait.until(ExpectedConditions.visibilityOf(signature));
+	    	waitForElementToBeVisible(signature);
 	        if (!signature.isDisplayed()) {
 	            flag = false;
 	        } else {
@@ -159,9 +152,8 @@ public class actionAndPreviewPage {
 	}
 	
 	public void generatePDF() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		generatePDFBtn.click();
-		wait.until(ExpectedConditions.visibilityOf(pdfHeading));
+		waitForElementToBeVisible(pdfHeading);
 	}
 	
 	public void saveInvoice() {
@@ -184,9 +176,7 @@ public class actionAndPreviewPage {
 	}
 	
 	public String getMessage() {
-		FluentWait<WebDriver> fluentWait;
-		fluentWait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
-        fluentWait.until(ExpectedConditions.visibilityOf(message));
+        waitForElementToBeAppear(message);
 		return message.getText().trim();
 	}
 	

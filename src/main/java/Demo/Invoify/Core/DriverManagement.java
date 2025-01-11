@@ -1,33 +1,24 @@
-package Demo.Invoify.core;
+package Demo.Invoify.Core;
+
+import java.io.File;
 
 import java.io.FileInputStream;
-
-
-
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
-
-import Demo.Invoify.Utils.logs;
-import Demo.Invoify.Utils.report;
 
 public class DriverManagement {
 
@@ -37,43 +28,20 @@ public class DriverManagement {
 	private Properties properties;
 	private String browser;
 	private String url;
-	private Method method;
-	
-	@BeforeSuite
-	public void startingTest() {
-		logs.logInfoMessage("[ Starting Test Execution ]", false, null);
-		report.init();
-	}
-	
-	@AfterSuite
-	public void endTest() {
-		logs.logInfoMessage("[ Ending Test Execution ]", false, null);
-		report.flush();
-	}
 
 	@BeforeMethod
-	public void setMethod(Method method) {
-		this.method = method;
-		report.createTest(method.getName(), method.getAnnotation(Test.class).description());
-	}
-	
-	@BeforeClass
-	public void initiateDriver() throws IOException {
+	public void launchApplication() throws IOException {
 		setUp();
 	}
 
-	@AfterClass
+	@AfterMethod
 	public void quitDriver() {
 		tearDown();
 	}
 
-	public void waitForPresenceOfElement(WebElement element) {
-		waitForElementToBeVisible(element);
-	}
-
 	private void loadProperties() throws IOException {
 		path = System.getProperty("user.dir");
-		fis = new FileInputStream(path + "/src/main/java/Demo/Invoify/Resources/variable.properties");
+		fis = new FileInputStream(path + "/src/main/java/Demo/Invoify/Resources/globalData.properties");
 		properties = new Properties();
 		properties.load(fis);
 		browser = properties.getProperty("browser");
@@ -81,10 +49,8 @@ public class DriverManagement {
 	}
 
 	public void setUp() throws IOException {
-		logs.logInfoMessage("Starting session...", false, null);
 		loadProperties();
 		driver = initDriver(browser);
-		logs.logInfoMessage("Session started: ", false, null);
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
@@ -129,9 +95,12 @@ public class DriverManagement {
 		return driver;
 	}
 
-	public void waitForElementToBeVisible(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-		wait.until(ExpectedConditions.visibilityOf(element));
+	public String getScreenShot(String fileName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "/report/" + fileName + ".png");
+		FileUtils.copyFile(src, file);
+		return System.getProperty("user.dir") + "/report/" + fileName + ".png";
 	}
 
 }

@@ -2,15 +2,16 @@ package Demo.Invoify.tests;
 
 import org.testng.annotations.Test;
 
+
 import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.testng.Assert;
 
+import Demo.Invoify.Core.DriverManagement;
 import Demo.Invoify.Pages.actionAndPreviewPage;
 import Demo.Invoify.Pages.homePage;
 import Demo.Invoify.Pages.invoiceDetails;
-import Demo.Invoify.core.DriverManagement;
 
 public class test_InvoiceDetail extends DriverManagement {
 

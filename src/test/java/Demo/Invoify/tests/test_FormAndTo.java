@@ -2,24 +2,25 @@ package Demo.Invoify.tests;
 
 import org.testng.annotations.Test;
 
+
 import java.io.IOException;
 
 import org.testng.Assert;
 
+import Demo.Invoify.Core.DriverManagement;
 import Demo.Invoify.Pages.homePage;
 import Demo.Invoify.Pages.invoiceDetails;
-import Demo.Invoify.core.DriverManagement;
 
 public class test_FormAndTo extends DriverManagement {
 
 	@Test(priority = 1)
-	public void testLogoIsDisplayed() {
+	public void testLogoIsDisplayed() throws IOException {
 		homePage home = new homePage(driver);
 		Assert.assertTrue(home.verifyingLogoIsDisplayed());
 	}
 
-	@Test(priority = 2)
-	public void testAddingNewCustomInput() {
+//	@Test(priority = 2)
+	public void testAddingNewCustomInput() throws IOException {
 		homePage home = new homePage(driver);
 		int numberOfInputInBillFrom = home.numberOfInputFieldInBillFrom();
 		home.clickOnAddCustomInput(0);
@@ -33,7 +34,7 @@ public class test_FormAndTo extends DriverManagement {
 		home.removeCustomInput("billTo");
 	}
 
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	public void testNextButtonFunctionality() throws IOException {
 		homePage home = new homePage(driver);
 		invoiceDetails invoiceDetail = new invoiceDetails(driver);

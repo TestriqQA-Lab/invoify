@@ -2,13 +2,13 @@ package Demo.Invoify.tests;
 
 import java.io.IOException;
 
+
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import Demo.Invoify.Core.DriverManagement;
 import Demo.Invoify.Pages.actionAndPreviewPage;
 import Demo.Invoify.Pages.homePage;
-import Demo.Invoify.core.DriverManagement;
 
 public class test_PreviewPage extends DriverManagement {
 

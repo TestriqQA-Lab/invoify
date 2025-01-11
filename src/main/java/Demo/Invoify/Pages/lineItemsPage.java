@@ -1,6 +1,5 @@
 package Demo.Invoify.Pages;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
@@ -11,18 +10,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class lineItemsPage {
+import Demo.Invoify.Core.PageObjectFacilitator;
+
+public class lineItemsPage extends PageObjectFacilitator {
 	
 	WebDriver driver;
 	Properties prop;
 
 	public lineItemsPage(WebDriver driver) throws IOException {
+		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
-		String path = System.getProperty("user.dir");
-		FileInputStream fis = new FileInputStream(path + "/src/main/java/Demo/Invoify/Resources/data.properties");
-		prop = new Properties();
-		prop.load(fis);
+		prop = loadData();
 	}
 	
 	@FindBy(xpath = "//button[text()='Add a new item']")

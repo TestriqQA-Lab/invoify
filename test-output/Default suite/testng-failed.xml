@@ -5,9 +5,11 @@
     <classes>
       <class name="Demo.Invoify.tests.test_FormAndTo">
         <methods>
+          <include name="startingTest"/>
+          <include name="endTest"/>
           <include name="initiateDriver"/>
           <include name="testLogoIsDisplayed"/>
-          <include name="initPages"/>
+          <include name="setMethod"/>
           <include name="quitDriver"/>
         </methods>
       </class> <!-- Demo.Invoify.tests.test_FormAndTo -->
