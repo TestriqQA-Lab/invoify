@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="6" failed="1" skipped="1">
+<testng-results ignored="0" total="8" passed="5" failed="2" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-11T12:28:22Z" name="Suite" finished-at="2025-01-11T12:31:40Z" duration-ms="197718">
+  <suite started-at="2025-01-11T12:35:04Z" name="Suite" finished-at="2025-01-11T12:38:18Z" duration-ms="193771">
     <groups>
     </groups>
-    <test started-at="2025-01-11T12:28:22Z" name="UploadTest" finished-at="2025-01-11T12:30:55Z" duration-ms="153215">
+    <test started-at="2025-01-11T12:35:04Z" name="UploadTest" finished-at="2025-01-11T12:37:32Z" duration-ms="148211">
       <class name="Demo.Invoify.tests.verifyAttachmentUpload">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:28:22Z" name="launchApplication" finished-at="2025-01-11T12:28:59Z" duration-ms="37650" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:35:04Z" name="launchApplication" finished-at="2025-01-11T12:35:40Z" duration-ms="36235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testSignatureUpload()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:28:59Z" name="testSignatureUpload" finished-at="2025-01-11T12:30:12Z" duration-ms="72462" status="PASS">
+        <test-method signature="testSignatureUpload()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:35:40Z" name="testSignatureUpload" finished-at="2025-01-11T12:36:53Z" duration-ms="73097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSignatureUpload -->
-        <test-method signature="verifyBillAttachement()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:30:12Z" name="verifyBillAttachement" finished-at="2025-01-11T12:30:54Z" duration-ms="41811" status="FAIL">
+        <test-method signature="verifyBillAttachement()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:36:53Z" name="verifyBillAttachement" finished-at="2025-01-11T12:37:31Z" duration-ms="37821" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [false] but found [true]]]>
@@ -53,19 +53,43 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyBillAttachement -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:30:55Z" name="quitDriver" finished-at="2025-01-11T12:30:55Z" duration-ms="358" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Demo.Invoify.tests.verifyAttachmentUpload@242aa8d9]" started-at="2025-01-11T12:37:32Z" name="quitDriver" finished-at="2025-01-11T12:37:32Z" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
       </class> <!-- Demo.Invoify.tests.verifyAttachmentUpload -->
     </test> <!-- UploadTest -->
-    <test started-at="2025-01-11T12:28:22Z" name="ActionTest" finished-at="2025-01-11T12:31:36Z" duration-ms="193992">
-      <class name="Demo.Invoify.tests.validatingInvoiceActions">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:28:22Z" name="launchApplication" finished-at="2025-01-11T12:28:59Z" duration-ms="37479" status="PASS">
+    <test started-at="2025-01-11T12:35:04Z" name="DataTest" finished-at="2025-01-11T12:38:12Z" duration-ms="188622">
+      <class name="Demo.Invoify.tests.dataInputValidation">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:35:04Z" name="launchApplication" finished-at="2025-01-11T12:35:40Z" duration-ms="36178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testInvoiceSaving()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:28:59Z" name="testInvoiceSaving" finished-at="2025-01-11T12:31:01Z" duration-ms="121754" status="SKIP">
+        <test-method signature="testBankDetailsAreEntered()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:35:40Z" name="testBankDetailsAreEntered" finished-at="2025-01-11T12:36:54Z" duration-ms="73752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBankDetailsAreEntered -->
+        <test-method signature="testProperTotalCalculation()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:36:54Z" name="testProperTotalCalculation" finished-at="2025-01-11T12:37:16Z" duration-ms="22561" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProperTotalCalculation -->
+        <test-method signature="testToggleButtonEnabling()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:37:16Z" name="testToggleButtonEnabling" finished-at="2025-01-11T12:38:12Z" duration-ms="55929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testToggleButtonEnabling -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:38:12Z" name="quitDriver" finished-at="2025-01-11T12:38:12Z" duration-ms="166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- Demo.Invoify.tests.dataInputValidation -->
+    </test> <!-- DataTest -->
+    <test started-at="2025-01-11T12:35:04Z" name="ActionTest" finished-at="2025-01-11T12:38:18Z" duration-ms="193771">
+      <class name="Demo.Invoify.tests.validatingInvoiceActions">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:35:04Z" name="launchApplication" finished-at="2025-01-11T12:35:40Z" duration-ms="36079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testInvoiceSaving()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:35:40Z" name="testInvoiceSaving" finished-at="2025-01-11T12:37:42Z" duration-ms="122371" status="SKIP">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Your invoice has been generated!] but found [Error]]]>
@@ -105,43 +129,55 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvoiceSaving -->
-        <test-method signature="testInvoiceSaving()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:31:01Z" name="testInvoiceSaving" finished-at="2025-01-11T12:31:27Z" duration-ms="25827" status="PASS">
+        <test-method signature="testInvoiceSaving()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:37:42Z" name="testInvoiceSaving" finished-at="2025-01-11T12:38:10Z" duration-ms="27266" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Your invoice has been generated!] but found [Error]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Your invoice has been generated!] but found [Error]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at Demo.Invoify.tests.validatingInvoiceActions.testInvoiceSaving(validatingInvoiceActions.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.retryFailed(Invoker.java:839)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1010)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:489)
+at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvoiceSaving -->
-        <test-method signature="testNavigation()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:31:27Z" name="testNavigation" finished-at="2025-01-11T12:31:36Z" duration-ms="8598" status="PASS">
+        <test-method signature="testNavigation()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:38:11Z" name="testNavigation" finished-at="2025-01-11T12:38:17Z" duration-ms="6843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testNavigation -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:31:36Z" name="quitDriver" finished-at="2025-01-11T12:31:36Z" duration-ms="260" status="PASS">
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Demo.Invoify.tests.validatingInvoiceActions@2c88b9fc]" started-at="2025-01-11T12:38:17Z" name="quitDriver" finished-at="2025-01-11T12:38:18Z" duration-ms="223" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
       </class> <!-- Demo.Invoify.tests.validatingInvoiceActions -->
     </test> <!-- ActionTest -->
-    <test started-at="2025-01-11T12:28:22Z" name="DataTest" finished-at="2025-01-11T12:31:40Z" duration-ms="197718">
-      <class name="Demo.Invoify.tests.dataInputValidation">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:28:22Z" name="launchApplication" finished-at="2025-01-11T12:28:59Z" duration-ms="37370" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testBankDetailsAreEntered()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:28:59Z" name="testBankDetailsAreEntered" finished-at="2025-01-11T12:30:13Z" duration-ms="74193" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testBankDetailsAreEntered -->
-        <test-method signature="testProperTotalCalculation()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:30:13Z" name="testProperTotalCalculation" finished-at="2025-01-11T12:30:38Z" duration-ms="24211" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testProperTotalCalculation -->
-        <test-method signature="testToggleButtonEnabling()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:30:38Z" name="testToggleButtonEnabling" finished-at="2025-01-11T12:31:39Z" duration-ms="61619" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testToggleButtonEnabling -->
-        <test-method is-config="true" signature="quitDriver()[pri:0, instance:Demo.Invoify.tests.dataInputValidation@6d304f9d]" started-at="2025-01-11T12:31:39Z" name="quitDriver" finished-at="2025-01-11T12:31:40Z" duration-ms="221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitDriver -->
-      </class> <!-- Demo.Invoify.tests.dataInputValidation -->
-    </test> <!-- DataTest -->
   </suite> <!-- Suite -->
 </testng-results>
