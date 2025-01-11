@@ -174,7 +174,7 @@ public class summaryPage extends PageObjectFacilitator {
 	public void uploadSignature() {
 		addSignButton.click();
 		uploadSignature.click();
-		addSignatureFromFolder.sendKeys(System.getProperty("user.dir") + prop.getProperty("imgSource"));
+		addSignatureFromFolder.sendKeys(System.getProperty("user.dir") + "/src/main/resources/" + prop.getProperty("imgSource"));
 		doneBtn.click();
 	}
 	

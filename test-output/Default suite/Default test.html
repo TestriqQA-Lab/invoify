@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jan 11 15:35:19 IST 2025</td>
+<td>Started on:</td><td>Sat Jan 11 18:33:12 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>90 seconds (90136 ms)</td>
+<tr><td>Total time:</td><td>70 seconds (70223 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Demo.Invoify.tests.test_PreviewPage.testInvoiceSaving()'><b>testInvoiceSaving</b><br>Test class: Demo.Invoify.tests.test_PreviewPage</td>
-<td><div><pre>java.lang.AssertionError: expected [Your invoice has been generated!] but found [Error]
+<td title='Demo.Invoify.tests.verifyAttachmentUpload.verifyBillAttachement()'><b>verifyBillAttachement</b><br>Test class: Demo.Invoify.tests.verifyAttachmentUpload</td>
+<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at Demo.Invoify.tests.test_PreviewPage.testInvoiceSaving(test_PreviewPage.java:24)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at org.testng.Assert.assertFalse(Assert.java:75)
+	at Demo.Invoify.tests.verifyAttachmentUpload.verifyBillAttachement(verifyAttachmentUpload.java:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,15 +107,13 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1874919946", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1874919946'><pre>java.lang.AssertionError: expected [Your invoice has been generated!] but found [Error]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1214125015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1214125015'><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at Demo.Invoify.tests.test_PreviewPage.testInvoiceSaving(test_PreviewPage.java:24)
+	at org.testng.Assert.assertFalse(Assert.java:65)
+	at org.testng.Assert.assertFalse(Assert.java:75)
+	at Demo.Invoify.tests.verifyAttachmentUpload.verifyBillAttachement(verifyAttachmentUpload.java:25)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -144,8 +140,21 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>70</td>
-<td>Demo.Invoify.tests.test_PreviewPage@5b367418</td></tr>
+<td>15</td>
+<td>Demo.Invoify.tests.verifyAttachmentUpload@d771cc9</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Demo.Invoify.tests.verifyAttachmentUpload.testSignatureUpload()'><b>testSignatureUpload</b><br>Test class: Demo.Invoify.tests.verifyAttachmentUpload</td>
+<td></td>
+<td>37</td>
+<td>Demo.Invoify.tests.verifyAttachmentUpload@d771cc9</td></tr>
 </table><p>
 </body>
 </html>

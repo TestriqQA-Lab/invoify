@@ -68,7 +68,7 @@ public class invoiceDetails extends PageObjectFacilitator {
 	}
 
 	public void addImage() {
-		imageInput.sendKeys(System.getProperty("user.dir") + prop.getProperty("imgSource"));
+		imageInput.sendKeys(System.getProperty("user.dir") + "/src/main/resources/" + prop.getProperty("imgSource"));
 	}
 	
 	public void enterIssueDate() {

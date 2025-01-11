@@ -72,7 +72,12 @@
 					<target>11</target> <!-- Or 11 if you prefer -->
 				</configuration>
 			</plugin>
-
 		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
 	</build>
+
 </project>

@@ -10,11 +10,12 @@ import Demo.Invoify.Pages.actionAndPreviewPage;
 import Demo.Invoify.Pages.homePage;
 import Demo.Invoify.Pages.invoiceDetails;
 import Demo.Invoify.Pages.summaryPage;
+import Demo.Invoify.TestComponant.RerunScript;
 
 public class verifyAttachmentUpload extends DriverManagement {
 	
 	
-	@Test
+	@Test(retryAnalyzer = RerunScript.class)
 	public void verifyBillAttachement() throws IOException {
 		homePage home = new homePage(driver);
 		home.switchTab("invoiceDetails");
