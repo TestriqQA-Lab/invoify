@@ -149,19 +149,19 @@ public class summaryPage extends PageObjectFacilitator {
 		switch(name) {
 		case "discount":
 			isElementDisplayed(discount_currencyUnit);
-			discount_USD_Percentage.click();
+			clickElement(discount_USD_Percentage);
 			isElementDisplayed(discount_currencyUnit);
 			break;
 			
 		case "tax":
 			isElementDisplayed(tax_currencyUnit);
-			tax_USD_Percentage.click();
+			clickElement(tax_USD_Percentage);
 			isElementDisplayed(tax_currencyUnit);
 			break;
 			
 		case "shipping":
 			isElementDisplayed(shipping_currencyUnit);
-			shipping_USD_Percentage.click();
+			clickElement(shipping_USD_Percentage);
 			isElementDisplayed(shipping_currencyUnit);
 			break;
 		}
@@ -172,24 +172,10 @@ public class summaryPage extends PageObjectFacilitator {
 	}
 	
 	public void uploadSignature() {
-		addSignButton.click();
-		uploadSignature.click();
+		clickElement(addSignButton);
+		clickElement(uploadSignature);
 		addSignatureFromFolder.sendKeys(System.getProperty("user.dir") + prop.getProperty("imgSource"));
-		doneBtn.click();
-	}
-	
-	public boolean isElementDisplayed(WebElement element) {
-		boolean flag = false;
-	    try {
-	        if (!element.isDisplayed()) {
-	            flag = false;
-	        } else {
-	            flag = true; 
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-	    return flag;
+		clickElement(doneBtn);
 	}
 	
 	

@@ -105,7 +105,7 @@ public class homePage extends PageObjectFacilitator {
 	private WebElement removeCustomInputForBillTo;
 	
 	public Boolean verifyingLogoIsDisplayed() {
-		return appLogo.isDisplayed();
+		return isElementDisplayed(appLogo);
 	}
 
 	public void switchTab(String tabName) {
@@ -150,10 +150,10 @@ public class homePage extends PageObjectFacilitator {
 	public void removeCustomInput(String name) {
 		switch (name) {
 		case "billForm":
-			removeCustomInputForBillFrom.click();
+			clickElement(removeCustomInputForBillFrom);
 			break;
 		case "billTo":
-			removeCustomInputForBillTo.click();
+			clickElement(removeCustomInputForBillTo);
 		}
 	}
 	
@@ -166,7 +166,7 @@ public class homePage extends PageObjectFacilitator {
 	}
 	
 	public void clickOnNextButton() {
-		nextButton.click();
+		clickElement(nextButton);
 	}
 	
 }

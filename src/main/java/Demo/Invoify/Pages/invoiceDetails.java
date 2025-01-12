@@ -64,7 +64,7 @@ public class invoiceDetails extends PageObjectFacilitator {
 	}
 
 	public void inputInvoiceNumber() {
-		invoiceNoInput.sendKeys(prop.getProperty("invoice_number"));
+		setTextInInput(invoiceNoInput, prop.getProperty("invoice_number"));
 	}
 
 	public void addImage() {
@@ -72,14 +72,14 @@ public class invoiceDetails extends PageObjectFacilitator {
 	}
 	
 	public void enterIssueDate() {
-		issueDate.click();
+		clickElement(issueDate);
 		selectMonth(prop.getProperty("issueMonth"));
 		selectYear(prop.getProperty("issueYear"));
 		selectDate(prop.getProperty("issueDate"));
 	}
 	
 	public void enterDueDate() {
-		dueDate.click();
+		clickElement(dueDate);
 		selectMonth(prop.getProperty("dueMonth"));
 		selectYear(prop.getProperty("dueYear"));
 		selectDate(prop.getProperty("dueDate"));
@@ -112,7 +112,7 @@ public class invoiceDetails extends PageObjectFacilitator {
 	}
 	
 	public void removeLogo() {
-		removeImage.click();
+		clickElement(removeImage);
 	}
 	
 	public String getTitleName() {
@@ -124,18 +124,7 @@ public class invoiceDetails extends PageObjectFacilitator {
 	}
 	
 	public Boolean verifyLogoIsDisplayedInPreview() {
-		boolean flag = false;
-	    try {
-	        if (!logoOnPreview.isDisplayed()) {
-	            flag = false;
-	        } else {
-	            flag = true; 
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-	    return flag;
-		
+		return isElementDisplayed(logoOnPreview);
 	}
 	
 }

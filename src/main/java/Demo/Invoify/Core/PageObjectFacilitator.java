@@ -47,9 +47,15 @@ public class PageObjectFacilitator {
 		wait.until(ExpectedConditions.invisibilityOf(element));
 	}
 	
+	public void waitForElementToBeClickable(WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
 	public boolean isElementDisplayed(WebElement element) {
 		boolean flag = false;
 	    try {
+	    	waitForElementToBeAppear(element);
 	        if (!element.isDisplayed()) {
 	            flag = false;
 	        } else {
@@ -59,6 +65,16 @@ public class PageObjectFacilitator {
 	        e.printStackTrace();
 	    }
 	    return flag;
+	}
+	
+	public void clickElement(WebElement element) {
+		waitForElementToBeClickable(element);
+		element.click();
+	}
+	
+	public void setTextInInput(WebElement element, String content) {
+		waitForElementToBeVisible(element);
+		element.sendKeys(content);
 	}
 
 }

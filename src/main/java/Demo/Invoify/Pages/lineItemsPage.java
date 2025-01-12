@@ -79,7 +79,7 @@ public class lineItemsPage extends PageObjectFacilitator {
 	}
 	
 	public void addnewItem() {
-		addItemBtn.click();
+		clickElement(addItemBtn);
 	}
 	
 	public int getTotalItemInList() {

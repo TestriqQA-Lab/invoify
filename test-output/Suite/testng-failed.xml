@@ -4,23 +4,13 @@
   <listeners>
     <listener class-name="Demo.Invoify.TestComponant.listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="UploadTest(failed)">
-    <classes>
-      <class name="Demo.Invoify.tests.verifyAttachmentUpload">
-        <methods>
-          <include name="verifyBillAttachement"/>
-          <include name="launchApplication"/>
-          <include name="quitDriver"/>
-        </methods>
-      </class> <!-- Demo.Invoify.tests.verifyAttachmentUpload -->
-    </classes>
-  </test> <!-- UploadTest(failed) -->
   <test thread-count="5" parallel="tests" name="ActionTest(failed)">
     <classes>
       <class name="Demo.Invoify.tests.validatingInvoiceActions">
         <methods>
           <include name="launchApplication"/>
           <include name="testInvoiceSaving"/>
+          <include name="testNavigation"/>
           <include name="quitDriver"/>
         </methods>
       </class> <!-- Demo.Invoify.tests.validatingInvoiceActions -->

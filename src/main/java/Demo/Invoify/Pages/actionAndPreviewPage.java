@@ -133,45 +133,35 @@ public class actionAndPreviewPage extends PageObjectFacilitator {
 	}
 	
 	public boolean verifySignature() {
-		boolean flag = false;
-	    try {
-	    	waitForElementToBeVisible(signature);
-	        if (!signature.isDisplayed()) {
-	            flag = false;
-	        } else {
-	            flag = true; 
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-	    return flag;
+		return isElementDisplayed(signature);
 	}
 	
 	public void fillTheForm() {
-		fillFormBtn.click();
+		clickElement(fillFormBtn);
 	}
 	
 	public void generatePDF() {
-		generatePDFBtn.click();
+		clickElement(generatePDFBtn);
 		waitForElementToBeVisible(pdfHeading);
 	}
 	
 	public void saveInvoice() {
-		saveInvoice.click();
+		clickElement(saveInvoice);
 	}
 	
 	public void addNewInvoice() {
-		addNewInvoice.click();
-		createInvoice.click();
+		clickElement(addNewInvoice);
+		clickElement(createInvoice);
 	}
 	
 	public void loadInvoice() {
-		loadInvoiceBtn.click();
+		clickElement(loadInvoiceBtn);
+		waitForElementToBeVisible(addJsonInvoiceFile);
 	}
 	
 	public void deleteInvoiceFromLoadInvoice() {
-		deleteInvoice.click();
-		closeSignPopUp.click();
+		clickElement(deleteInvoice);
+		clickElement(closeSignPopUp);
 		driver.navigate().refresh();
 	}
 	
@@ -181,17 +171,7 @@ public class actionAndPreviewPage extends PageObjectFacilitator {
 	}
 	
 	public boolean verifySavedInvoiceInLoadInvoice() {
-		boolean flag = false;
-	    try {
-	        if (!savedInvoice.isDisplayed()) {
-	            flag = false;
-	        } else {
-	            flag = true; 
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-	    return flag;
+		return isElementDisplayed(savedInvoice);
 	}
 	
 	public String getSendersNameFromPreview() {
@@ -204,21 +184,21 @@ public class actionAndPreviewPage extends PageObjectFacilitator {
 	}
 	
 	public void enterEmailAndSendMail() {
-		sendInvoice.click();
-		inputEmail.sendKeys(prop.getProperty("mail"));
-		sendPDF.click();
+		clickElement(sendInvoice);
+		setTextInInput(inputEmail, prop.getProperty("mail"));
+		clickElement(sendPDF);
 	}
 	
 	public void enterInvalidEmailAndSendMail() {
-		sendInvoice.click();
-		inputEmail.sendKeys("test.com");
-		sendPDF.click();
+		clickElement(sendInvoice);
+		setTextInInput(inputEmail, "test.com");
+		clickElement(sendPDF);
 	}
 	
 	public String verifyErrorMessageOfInvalidMail() {
 		String meesage = errorMessage.getText();
 		errorMessage.isDisplayed();
-		closeSignPopUp.click();
+		clickElement(closeSignPopUp);
 		return meesage;
 	}
 	

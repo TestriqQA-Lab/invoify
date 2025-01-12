@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Demo.Invoify.tests.verifyAttachmentUpload">
+      <class name="Demo.Invoify.tests.validatingInvoiceActions">
         <methods>
-          <include name="verifyBillAttachement"/>
           <include name="launchApplication"/>
+          <include name="testInvoiceSaving"/>
           <include name="quitDriver"/>
         </methods>
-      </class> <!-- Demo.Invoify.tests.verifyAttachmentUpload -->
+      </class> <!-- Demo.Invoify.tests.validatingInvoiceActions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

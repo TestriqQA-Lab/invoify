@@ -32,9 +32,9 @@ public class paymentInfoPage extends PageObjectFacilitator {
 	private WebElement inputAccNumber;
 
 	public void enterBankDetails() {
-		inputBankName.sendKeys(prop.getProperty("bank_name"));
-		inputAccName.sendKeys(prop.getProperty("account_name"));
-		inputAccNumber.sendKeys(prop.getProperty("account_number"));
+		setTextInInput(inputBankName, prop.getProperty("bank_name"));
+		setTextInInput(inputAccName, prop.getProperty("account_name"));
+		setTextInInput(inputAccNumber, prop.getProperty("account_number"));
 	}
 
 	public Boolean verifyAccountDetails(String bankName, String accName, String accNumber) {
