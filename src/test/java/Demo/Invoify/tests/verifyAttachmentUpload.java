@@ -15,7 +15,7 @@ import Demo.Invoify.TestComponant.RerunScript;
 public class verifyAttachmentUpload extends DriverManagement {
 	
 	
-	@Test(retryAnalyzer = RerunScript.class)
+	@Test(priority = 1, retryAnalyzer = RerunScript.class)
 	public void verifyBillAttachement() throws IOException {
 		homePage home = new homePage(driver);
 		home.switchTab("invoiceDetails");
@@ -26,7 +26,7 @@ public class verifyAttachmentUpload extends DriverManagement {
 		Assert.assertFalse(invoiceDetail.verifyLogoIsDisplayedInPreview());
 	}
 	
-	@Test
+	@Test(priority = 2)
 	public void testSignatureUpload() throws IOException {
 		homePage home = new homePage(driver);
 		home.switchTab("summary");

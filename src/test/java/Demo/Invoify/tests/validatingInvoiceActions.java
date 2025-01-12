@@ -17,7 +17,7 @@ import Demo.Invoify.TestComponant.RerunScript;
 
 public class validatingInvoiceActions extends DriverManagement {
 	
-	@Test
+	@Test(priority = 1)
 	public void testNavigation() throws IOException {
 		homePage home = new homePage(driver);
 		Assert.assertTrue(home.verifyingLogoIsDisplayed());
@@ -26,7 +26,7 @@ public class validatingInvoiceActions extends DriverManagement {
 		Assert.assertTrue(invoiceDetail.getTitleName().contains("Invoice Details"));
 	}
 	
-	@Test(retryAnalyzer = RerunScript.class)
+	@Test(priority = 2, retryAnalyzer = RerunScript.class)
 	public void testInvoiceSaving() throws IOException {
 		actionAndPreviewPage preview = new actionAndPreviewPage(driver);
 		preview.loadInvoiceFromDevice();

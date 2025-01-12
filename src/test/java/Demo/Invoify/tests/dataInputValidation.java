@@ -14,7 +14,7 @@ import Demo.Invoify.Pages.summaryPage;
 
 public class dataInputValidation extends DriverManagement {
 
-	@Test
+	@Test(priority = 1)
 	public void testBankDetailsAreEntered() throws IOException {
 		homePage home = new homePage(driver);
 		home.switchTab("paymentInfo");
@@ -27,7 +27,7 @@ public class dataInputValidation extends DriverManagement {
 		Assert.assertTrue(paymentInfo.verifyAccountDetails(bankName, accName, accNumber));
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void testProperTotalCalculation() throws InterruptedException, IOException {
 		homePage home = new homePage(driver);
 		home.switchTab("lineItems");
@@ -37,7 +37,7 @@ public class dataInputValidation extends DriverManagement {
 		Assert.assertEquals(item.getTotalAmountFromItem(), item.expectedTotalAmount());
 	}
 
-	@Test
+	@Test(priority = 3)
 	public void testToggleButtonEnabling() throws IOException {
 		homePage home = new homePage(driver);
 		home.switchTab("summary");
